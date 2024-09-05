@@ -4,7 +4,7 @@ Obtain the html code for Foothill or De Anza College's class schedule (to save f
 
 Automatically saves to the folder that the script is placed in
 
-Waitlist Slot Finder checks every 2.5 min if a waitlist slot has opened in a class with a given crn
+Waitlist Slot Finder checks every 2.5 min if a waitlist slot has opened in a class with a given crn list
 
 Waitlist Slot Finder usage:
 

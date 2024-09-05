@@ -107,14 +107,9 @@ if __name__ == "__main__":
             real_prof_data = get_real_prof(html_text, curr_crn)
             if real_prof_data[0]:
                 print("NO LONGER M. STAFF")
-                send_message(phone_number, carrier, "\nNO LONGER M. STAFF: " + curr_crn + "\nProf line: " + real_prof_data[1] + "\nOpen slots: " + real_prof_data[2] + "\nWaitlist slots: " + real_prof_data[3] + "\nWaitlist capacity: " + real_prof_data[4]) # \n removes the X-CMAE-Envelope message
-                found_prof = True
+                send_message(phone_number, carrier, "\nNO LONGER M. STAFF: " + str(curr_crn) + "\nProf line: " + real_prof_data[1] + "\nOpen slots: " + str(real_prof_data[2]) + "\nWaitlist slots: " + str(real_prof_data[3]) + "\nWaitlist capacity: " + str(real_prof_data[4])) # \n removes the X-CMAE-Envelope message
+                print("FOUND PROF:", real_prof_data[1], "\nOpen slots:", real_prof_data[2], "\nWaitlist slots:", real_prof_data[3], "\nWaitlist capacity:", real_prof_data[4])
+            else:
+                print("Still M. Staff:", real_prof_data[1], "\nOpen slots:", real_prof_data[2], "\nWaitlist slots:", real_prof_data[3], "\nWaitlist capacity:", real_prof_data[4])
         print("Sleeping")
-        if (real_prof_data[0]):
-            print("FOUND PROF:", real_prof_data[1], "\nOpen slots:", real_prof_data[2], "\nWaitlist slots:", real_prof_data[3], "\nWaitlist capacity:", real_prof_data[4])
-            found_prof = False
-            # Include if don't want to spam
-            exit()
-        else:
-            print("Still M. Staff:", real_prof_data[1], "\nOpen slots:", real_prof_data[2], "\nWaitlist slots:", real_prof_data[3], "\nWaitlist capacity:", real_prof_data[4])
         time.sleep(time_sleep_sec)
