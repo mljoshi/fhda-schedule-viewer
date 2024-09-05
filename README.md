@@ -20,4 +20,8 @@ M Staff Finder usage:
 
 py m_staff_finder.py phone_number carrier crn
 
+Example:
+
+py m_staff_finder.py 1234567890 verizon 27516
+
 This requires carrier information since it will use an email to send a text message (e.g. Verizon phone's can be texted by emailing 1234567890@vtext.com)
