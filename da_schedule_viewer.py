@@ -10,6 +10,7 @@ def quarter_num_to_quarter(quarter_num):
     elif quarter_num == 4:
         return "Spring"
     return "Summer"
+    # return ["Summer", "Fall", "Winter", "Spring"][quarter_num - 1]
 
 def campus_num_to_campus(campus_num):
     if campus_num == 2:
