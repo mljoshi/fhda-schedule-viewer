@@ -90,7 +90,6 @@ if __name__ == "__main__":
                 print("OPEN SLOT(s) AVAILABLE")
                 send_message(phone_number, carrier, "\nOPEN SLOT(s) AVAILABLE. CRN: " + curr_crn) # \n removes the X-CMAE-Envelope message
                 found_open_slots = True
-        print("Sleeping")
         if (found_waitlist_slots):
             print("FOUND WAITLIST SLOTS SOMEWHERE")
             found_waitlist_slots = False
@@ -101,4 +100,5 @@ if __name__ == "__main__":
             found_open_slots = False
         else:
             print("No available open slots found")
+        print("Sleeping")
         time.sleep(time_sleep_sec)

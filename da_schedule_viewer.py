@@ -49,7 +49,7 @@ def automatic_term_code_and_file_name(campus_name):
     else: # Winter (past fall cutoff but not accounted for by winter cutoff)
         quarter_num = 3
         year += 1 # Need to add one (for file name purposes) because you may fetch data for Winter 2024 in December 2023 for example
-    end_school_year = date_today.year
+    end_school_year = year
     if quarter_num == 1 or quarter_num == 2: # Fall and I believe summer as well are considered apart of the next school year (i.e. Fall 2023 is considered Fall 2023-2024 which means the year code is 2024)
         end_school_year += 1
     # 2024 is ending year of the current school year (Ex Fall 2023 is of the 2023-2024 school year, so it's 2024), 10s place is quarter/season (with 2 being fall), 1s place is FH/DA campus (1/2)
